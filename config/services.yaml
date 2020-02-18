@@ -25,3 +25,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\FeedsImporterFactory:
+        class:   App\Service\FeedsImporterFactory
+
+
+    App\Service\FeedsImporter:
+        class:   App\Service\FeedsImporter
+        factory: '@App\Service\FeedsImporterFactory'
+        arguments:    ["@doctrine.orm.entity_manager"]
+
