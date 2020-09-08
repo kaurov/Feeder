@@ -7,8 +7,9 @@ namespace App\Service;
  * import the data from all injected feeds objects to local database repository
  * @package App\Entity
  */
-class FeedsImporter
+class FeedsImporter implements FeedsImporterInterface
 {
+
     /**
      * @var array the array of feeds objects to be imported
      */
