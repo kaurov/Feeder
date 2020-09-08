@@ -34,7 +34,7 @@ class FeedJson implements FeedInterface
         foreach ($entries as $entry) {
             $blogRecord = new \App\Entity\Blog();
             $blogRecord->add(
-                self::ID,
+                static::ID,
                 $entry['title'],
                 $entry['content'] ?? null,
                 $entry['imageURL'] ?? null

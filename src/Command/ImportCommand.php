@@ -65,8 +65,11 @@ class ImportCommand extends Command
         if ($feedId) {
             $io->note(\sprintf('You passed not implemented argument: %s', $feedId));
         } else {
-            $this->importer->import();
-            $io->success('Feeds Import script is executed! Pass --help to see your options.');
+            $isWarning = $this->importer->import();
+            $io->success(
+                'Feeds Import script is executed' . ($isWarning ? ' with no errors' : '') . '! '.
+                'Pass --help to see your options.'
+            );
         }
 
 
