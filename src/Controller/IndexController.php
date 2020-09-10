@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Blog;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
